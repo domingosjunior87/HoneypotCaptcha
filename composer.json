@@ -1,0 +1,21 @@
+{
+    "name": "domingosjunior87/HoneypotCaptcha",
+    "description": "Plugin for CakePHP 2.x to use a Honeypot Captcha",
+    "type": "cakephp-plugin",
+    "keywords": ["cakephp", "plugin", "honeypot", "captcha"],
+    "authors": [
+        {
+            "name": "Domingos Coelho",
+            "homepage": "https://github.com/domingosjunior87",
+            "role": "Author"
+        }
+    ],
+    "require": {
+    	"composer/installers": "~1.0",
+        "cakephp/cakephp": "2.*"
+    },
+    "support": {
+        "issues": "https://github.com/domingosjunior87/HoneypotCaptcha/issues",
+        "source": "https://github.com/domingosjunior87/HoneypotCaptcha"
+    }
+}
