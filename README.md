@@ -27,7 +27,7 @@ public $components = array(
     'HoneypotCaptcha.Honeypot' => array(
         'text' => array('email_user', 'email_admin'),
         'checkbox' => array('validate_submit', 'validate_form'),
-		'hidden' => array('phone_number'),
+        'hidden' => array('phone_number'),
         'errorMessage' => "Error message"
     )
 );
