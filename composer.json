@@ -1,5 +1,5 @@
 {
-    "name": "domingosjunior87/HoneypotCaptcha",
+    "name": "domingosjunior87/honeypot-captcha",
     "description": "Plugin for CakePHP 2.x to use a Honeypot Captcha",
     "type": "cakephp-plugin",
     "keywords": ["cakephp", "plugin", "honeypot", "captcha"],
@@ -17,5 +17,8 @@
     "support": {
         "issues": "https://github.com/domingosjunior87/HoneypotCaptcha/issues",
         "source": "https://github.com/domingosjunior87/HoneypotCaptcha"
-    }
+    },
+	"extra": {
+		"installer-name": "HoneypotCaptcha"
+	}
 }
