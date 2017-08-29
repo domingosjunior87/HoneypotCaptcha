@@ -15,30 +15,36 @@ composer require domingosjunior87/HoneypotCaptcha
 ## Setup
 In app/Config/bootstrap.php add:
 
-```
+```php
 CakePlugin::load('HoneypotCaptcha');
 ```
 
 ## Usage
 In controller, import the component and the helper, like this:
 
-	public $components = array(
-        'HoneypotCaptcha.Honeypot' => array(
-            'text' => array('email_user', 'email_admin'),
-            'checkbox' => array('validate_submit', 'validate_form'),
-			'hidden' => array('phone_number'),
-            'errorMessage' => "Error message"
-        )
-    );
-	
-	public $helpers = array('HoneypotCaptcha.Honeypot');
+```php
+public $components = array(
+    'HoneypotCaptcha.Honeypot' => array(
+        'text' => array('email_user', 'email_admin'),
+        'checkbox' => array('validate_submit', 'validate_form'),
+		'hidden' => array('phone_number'),
+        'errorMessage' => "Error message"
+    )
+);
+
+public $helpers = array('HoneypotCaptcha.Honeypot');
+```
 
 In view, just put this, inside a form tag:
 
-	echo $this->Honeypot->render();
+```php
+echo $this->Honeypot->render();
+```
 
 When submit the form, validate data:
 
-	if (!$this->Honeypot->validate()) {
-		return $this->redirect(array('action' => 'index'));
-	}
+```php
+if (!$this->Honeypot->validate()) {
+	return $this->redirect(array('action' => 'index'));
+}
+```
