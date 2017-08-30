@@ -9,7 +9,7 @@ Plugin for CakePHP 2.x to use a Honeypot Captcha
 In your app directory type
 
 ```
-composer require domingosjunior87/HoneypotCaptcha
+composer require domingosjunior87/honeypot-captcha
 ```
 
 ## Setup
