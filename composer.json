@@ -3,6 +3,7 @@
     "description": "Plugin for CakePHP 2.x to use a Honeypot Captcha",
     "type": "cakephp-plugin",
     "keywords": ["cakephp", "plugin", "honeypot", "captcha"],
+    "license": "MIT",
     "authors": [
         {
             "name": "Domingos Coelho",
