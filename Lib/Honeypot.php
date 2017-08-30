@@ -72,8 +72,6 @@ class Honeypot
             $html .= '</div>';
         }
 
-//        CakeSession::write($this->sessionKey . '.text.' . $inputName, $value);
-
         return $html;
     }
 
@@ -114,8 +112,6 @@ class Honeypot
             $html .= '</div>';
         }
 
-//        CakeSession::write($this->sessionKey . '.checkbox.' . $inputName, $value);
-
         return $html;
     }
 
@@ -138,8 +134,6 @@ class Honeypot
         $html .= 'autocomplete="off" ';
         $html .= '/>';
         $html .= "\r\n";
-
-//        CakeSession::write($this->sessionKey . '.hidden.' . $inputName, $value);
 
         return $html;
     }
@@ -204,7 +198,17 @@ class Honeypot
                 }
             }
 
-            // TODO: Validate hidden inputs
+            $hiddens = CakeSession::read($this->sessionKeyHidden());
+            if (!is_null($hiddens)) {
+                $hiddens = array_keys($hiddens);
+                foreach ($hiddens as $hiddenInput) {
+                    if (!$this->validateHidden($hiddenInput, $data[$hiddenInput])) {
+                        return false;
+                    }
+
+                    $success++;
+                }
+            }
         }
 
         return ($success > 0);
