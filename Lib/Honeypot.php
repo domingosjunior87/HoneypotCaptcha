@@ -181,7 +181,8 @@ class Honeypot
             if (!is_null($checkboxes)) {
                 $checkboxes = array_keys($checkboxes);
                 foreach ($checkboxes as $checkboxInput) {
-                    if (empty(CakeSession::read($this->sessionKeyCheckbox() . '.' . $checkboxInput))) {
+                    $session = CakeSession::read($this->sessionKeyCheckbox() . '.' . $checkboxInput);
+                    if (empty($session)) {
                         if (isset($data[$checkboxInput])) {
                             return false;
                         }
